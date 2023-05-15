@@ -8,7 +8,12 @@ const connectDB = require('./config/dbConnection')
 connectDB()
 const app = express()
 app.use(express.json())
-// app.use(cors)
+
+const corsOption = {
+  credentials: true,
+  origin: ['http://localhost:3000', 'http://localhost:80']
+}
+app.use(cors(corsOption))
 const PORT = process.env.PORT || 5000
 
 // attempt to resolve cors issue
