@@ -11,6 +11,14 @@ app.use(express.json())
 // app.use(cors)
 const PORT = process.env.PORT || 5000
 
+// attempt to resolve cors issue
+app.options('/', (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader('Access-Control-Allow-Methods', '*');
+  res.setHeader("Access-Control-Allow-Headers", "*");
+  res.end();
+});
+
 app.get('/', (req, res) => {
   res.json({message: 'Portfolio Backend'})
 })
