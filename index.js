@@ -11,7 +11,7 @@ app.use(express.json())
 
 const corsOption = {
   credentials: true,
-  origin: ['http://localhost:3000', 'http://localhost:80', 'https://90ab-2605-a200-9201-5a70-b07a-f170-b4cb-ea79.ngrok-free.app']
+  origin: ['http://localhost:3000', 'http://localhost:80']
 }
 app.use(cors(corsOption))
 const PORT = process.env.PORT || 5000
