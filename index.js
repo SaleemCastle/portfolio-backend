@@ -11,7 +11,7 @@ app.use(express.json())
 
 const corsOption = {
   credentials: true,
-  origin: ['http://localhost:3000', 'http://localhost:80', 'https://next-react-portfolio-website-574z5fgbr-saleemcastle.vercel.app']
+  origin: ['http://localhost:3000', 'http://localhost:80', 'https://next-react-portfolio-website-htmomoorl-saleemcastle.vercel.app']
 }
 app.use(cors(corsOption))
 const PORT = process.env.PORT || 5000
